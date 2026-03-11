@@ -27,7 +27,7 @@ jobs:
 
       # Step 3 - Install dependencies
       - name: Install dependencies
-        run: npm install
+        run: npm ci
         working-directory: backend
 
       # Step 4 - Run ESLint
