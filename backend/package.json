@@ -23,5 +23,12 @@
     "express": "^5.2.1",
     "langchain": "^1.2.30",
     "zod": "^3.25.76"
-  }
+  },
+  "jest": {
+    "transform": {},
+    "testEnvironment": "node",
+    "extensionsToTreatAsEsm": [".js"],
+    "moduleNameMapper": {
+      "^(\\.{1,2}/.*)\\.js$": "$1"
+    }}
 }
