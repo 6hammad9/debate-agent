@@ -8,6 +8,9 @@
     "lint": "npx eslint src/**/*.js",
     "test": "node --experimental-vm-modules node_modules/.bin/jest"
   },
-  "dependencies": {},
-  "devDependencies": {}
+  "devDependencies": {
+    "eslint": "^8.57.1",
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.14"
+  }
 }
