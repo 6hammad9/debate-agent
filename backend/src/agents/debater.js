@@ -141,12 +141,20 @@ export async function runDebateTurn(debater, topic, history) {
     // ✅ Pass topic into the system prompt
     new SystemMessage(buildSystemPrompt(debater.side, topic)),
     new HumanMessage(
-      `Topic: "${topic}"\n\nPrevious debate:\n${
-        history.length > 0
-          ? history.map(h => `${h.side}: ${h.argument}`).join("\n")
-          : "This is the opening argument — no history yet."
-      }\n\nMake a strong one-sided argument ${debater.side === "FOR" ? "IN FAVOR OF" : "AGAINST"} "${topic}". Search only for evidence supporting YOUR side.`
-    ),
+  `Topic: "${topic}"
+
+${history.length > 0 ? `
+YOUR OPPONENT JUST SAID:
+"${history[history.length - 1].argument}"
+
+You MUST directly attack that specific argument above.
+Quote their words and tear them apart.
+Then make your own point with evidence.
+` : "This is the opening argument — no history yet. Make your case."}
+
+Make a strong one-sided argument ${debater.side === "FOR" ? "IN FAVOR OF" : "AGAINST"} "${topic}".
+Search for evidence that destroys the opponent's claim.`
+)
   ]
   // ... rest of the function stays the same
 
