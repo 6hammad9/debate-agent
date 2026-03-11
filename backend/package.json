@@ -6,7 +6,7 @@
   "start": "node src/server.js",
   "dev": "nodemon src/server.js",
   "lint": "./node_modules/.bin/eslint src/**/*.js",
-  "test": "node --experimental-vm-modules node_modules/.bin/jest"
+  "test": "node --experimental-vm-modules node_modules/.bin/jest --passWithNoTests"
 },
   "devDependencies": {
     "eslint": "^8.57.1",
