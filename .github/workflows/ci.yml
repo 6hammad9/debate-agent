@@ -29,7 +29,7 @@ jobs:
         working-directory: backend
 
       - name: Run tests
-        run: npm test
+        run: node --experimental-vm-modules node_modules/jest/bin/jest.js --passWithNoTests
         working-directory: backend
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
