@@ -104,9 +104,9 @@ async function createLLM() {
   } catch (err) {
     // Both failed — throw a clear error so the user knows what to do
     throw new Error(
-      `❌ No LLM available.\n` +
-      `   Gemini: check your GEMINI_API_KEY in .env\n` +
-      `   Ollama: make sure Ollama is running (ollama serve) and model is pulled (ollama pull llama3.2:3b)\n` +
+      "❌ No LLM available.\n" +
+      "   Gemini: check your GEMINI_API_KEY in .env\n" +
+      "   Ollama: make sure Ollama is running (ollama serve) and model is pulled (ollama pull llama3.2:3b)\n" +
       `   Original error: ${err.message}`
     )
   }
